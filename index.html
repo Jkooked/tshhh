@@ -3,22 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <title>Секретный проект 🤫</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Подключаем шрифт -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       background-color: black;
       color: white;
       font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
       text-align: center;
-      padding-top: 100px;
-      overflow: hidden;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 6vw;
+      margin-bottom: 30px;
     }
 
     #mainText {
       display: none;
-      font-size: 60px;
+      font-size: 8vw;
       color: #ff0033;
       animation: shake 0.1s infinite;
+      max-width: 90%;
     }
 
     #image {
@@ -27,11 +47,13 @@
       border: 10px solid hotpink;
       border-radius: 20px;
       box-shadow: 0 0 20px magenta;
+      max-width: 90vw;
+      height: auto;
     }
 
     button {
-      padding: 20px 40px;
-      font-size: 24px;
+      padding: 15px 30px;
+      font-size: 5vw;
       background-color: lime;
       border: none;
       border-radius: 15px;
@@ -59,7 +81,7 @@
 </head>
 <body>
 
-  <h1>У меня к тебе важный вопрос </h1>
+  <h1>У меня к тебе важный вопрос</h1>
   <button onclick="startMakaka()">Чезааа</button>
 
   <div id="mainText">💥 DID YOU POOP TODAY???? 💩</div>
