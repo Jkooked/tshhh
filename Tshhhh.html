@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Секретный проект 🤫</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      padding-top: 100px;
+      overflow: hidden;
+    }
+
+    #mainText {
+      display: none;
+      font-size: 60px;
+      color: #ff0033;
+      animation: shake 0.1s infinite;
+    }
+
+    #image {
+      display: none;
+      margin-top: 30px;
+      border: 10px solid hotpink;
+      border-radius: 20px;
+      box-shadow: 0 0 20px magenta;
+    }
+
+    button {
+      padding: 20px 40px;
+      font-size: 24px;
+      background-color: lime;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background-color: #00cc66;
+    }
+
+    @keyframes shake {
+      0% { transform: translate(1px, 1px) rotate(0deg); }
+      20% { transform: translate(-1px, -2px) rotate(-1deg); }
+      40% { transform: translate(-3px, 0px) rotate(1deg); }
+      60% { transform: translate(3px, 2px) rotate(0deg); }
+      80% { transform: translate(1px, -1px) rotate(1deg); }
+      100% { transform: translate(-1px, 2px) rotate(-1deg); }
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>У меня к тебе важный вопрос </h1>
+  <button onclick="startMakaka()">Чезааа</button>
+
+  <div id="mainText">💥 DID YOU POOP TODAY???? 💩</div>
+
+  <img id="image" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGZ1cThvaG1qNXAxcHZ0YzNoc3FtMWNnaWdrZHI0cDllc202Y2JueCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SpPVAQT0mQXzq/giphy.gif" width="400" alt="Макака">
+
+  <audio id="sound1" src="https://www.myinstants.com/media/sounds/fart-with-reverb.mp3"></audio>
+  <audio id="sound2" src="https://www.myinstants.com/media/sounds/airhorn.mp3"></audio>
+
+  <script>
+    function startMakaka() {
+      document.body.style.backgroundColor = "#ffccff";
+      document.body.style.color = "#000000";
+      document.querySelector("h1").style.display = "none";
+      document.querySelector("button").style.display = "none";
+
+      document.getElementById("mainText").style.display = "block";
+      document.getElementById("image").style.display = "block";
+
+      document.getElementById("sound1").play();
+      setTimeout(() => {
+        document.getElementById("sound2").play();
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>
